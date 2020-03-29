@@ -1,0 +1,7 @@
+{
+  "name": "empresascrud",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

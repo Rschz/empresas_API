@@ -1,0 +1,61 @@
+﻿@model Empresas_MVC.Models.EmpresaViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Crear empresa</h2>
+
+<h4>Información de empresa</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1"> <span class="glyphicon glyphicon-user"></span></span>
+                    <input asp-for="Nombre" class="form-control" aria-describedby="basic-addon1" required />
+                </div>
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Correo" class="control-label"></label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="addon2">@@</span>
+                    <input type="email" asp-for="Correo" class="form-control" aria-describedby="addon2" />
+                </div>
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Direccion" class="control-label"></label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="addon3"><span class="glyphicon glyphicon-road" ></span></span>
+                    <input asp-for="Direccion" class="form-control" aria-describedby="addon3" />
+                </div>
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Postal" class="control-label"></label>
+                <div class="input-group">
+                    <span class="input-group-addon" id="addon4">#</span>
+                    <input asp-for="Postal" class="form-control" aria-describedby="addon4" />
+                </div>
+                <span asp-validation-for="Postal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index"><span class="glyphicon glyphicon-arrow-left"></span> Volver</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

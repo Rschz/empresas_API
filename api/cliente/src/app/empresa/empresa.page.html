@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="danger" (click) = "dismiss()">Cerrar</ion-button>
+    </ion-buttons>
+    <ion-title>Empresas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click) ="presentEditModal()">Editar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>{{empresa.empresaID}}</ion-card-subtitle>
+      <ion-card-title>{{empresa.nombre}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content> 
+      <ion-item>
+        <ion-label position="stacked">Correo</ion-label>
+        <ion-input disabled>{{empresa.correo}}</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" >Direccion</ion-label>
+        <ion-input disabled>{{empresa.direccion}}</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Codigo postal</ion-label>
+        <ion-input readonly>{{empresa.postal}}</ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

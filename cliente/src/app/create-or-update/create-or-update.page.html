@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="dismiss()">
+      <ion-button color="danger">Cancelar</ion-button>
+    </ion-buttons>
+    <ion-title>{{ empresa.empresaID == 0 ? "Crear": "Actualizar" }} Empresa</ion-title>
+    <ion-buttons slot="end">
+      <ion-button type="submit" (click)="submitForm()">Guardar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+  
+    <ion-card-content>
+      <form #formulario="ngForm">
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input name="nombre" autofocus="true" [(ngModel)]="empresa.nombre" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Correo</ion-label>
+          <ion-input name="correo" type="email" [(ngModel)]="empresa.correo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" >Direccion</ion-label>
+          <ion-input name="direccion" [(ngModel)]="empresa.direccion"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Codigo postal</ion-label>
+          <ion-input name="postal" [(ngModel)]="empresa.postal"></ion-input>
+        </ion-item>
+      </form> 
+    </ion-card-content>
+  </ion-card>
+</ion-content>

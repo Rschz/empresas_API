@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Empresas_MVC.Models.EmpresaViewModel>
+
+@{
+    ViewData["Title"] = "Empresas";
+}
+
+<h2>Empresas</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Correo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Postal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Postal)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.EmpresaID" title="Editar" class="btn btn-success"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a> |
+                <a asp-action="Details" asp-route-id="@item.EmpresaID" title="Detalle" class="btn btn-warning"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></a> |
+                <a asp-action="Delete" asp-route-id="@item.EmpresaID" title="Eliminar" class="btn btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAeNbQuws70mQi/wyvdQBqQAAAAACAAAAAAAQZgAAAAEAACAAAABfmaV9ZXTKCAsoYlbMPIr0YsAyBosyzmrN2IPAITW2NwAAAAAOgAAAAAIAACAAAAD8C2+z6kwPQKo0qlywISkiAHo7MXpfLOAACIjXBTHE74AAAABcn5bWAe+H+VRp5ZsodZuEjaVArqLGRrMqCeYuO6OaUa1KHwm8Li5RfBQRrxWym8rkRySHCkk/FjgprjJEXJSQZ6mF4/Y6no9TTxk2F8JVVnPbRxCBAFRb0r2a0DWOVL4VtBzcY7+3bppxC8/8UNSw4G+7EJKZZE2OPuQRUTZOH0AAAAAhFeoLU4ZtGas+xnAC7BU538PWXTwqWB/F7HVP2XqJbBWmSfVk9bj5aL2Tk4nAL+dKXxmtzK4pleAXLGLAl7uu</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="AzureStorageConnectionString-1">
+      <Value>DefaultEndpointsProtocol=https%3bAccountName=estudiante%3bAccountKey=NtAuNzg8avAbx3RM1OZwmHG+r+BnfhhUlW2b4pg0zLRGhBUGokQDClla1yjUoJP1lqHRofWzkGk+oel4seYSlw==%3bEndpointSuffix=core.windows.net</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="Empresas_MVCContext">
+      <Value>Data Source=estu.database.windows.net%3bInitial Catalog=db_patrones%3bUser ID=adminR%3bPassword=5537Rs!a%3bConnect Timeout=60%3bEncrypt=True%3bTrustServerCertificate=False%3bApplicationIntent=ReadWrite%3bMultiSubnetFailover=False</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
